@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Torque & Triumph</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Rajdhani:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">
+    <img src="IMAGE/logo/logo.jpeg" alt="T&T Logo" onerror="this.style.display='none'"/>
+    <span>TORQUE &amp; TRIUMPH</span>
+  </div>
+  <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#sponsors">Sponsors</a></li>
+    <li><a href="#about-cit">About CIT</a></li>
+    <li><a href="#events">Events</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#team">Team</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#feedback">Feedback</a></li>
+  </ul>
+</nav>
+
+<!-- HOME -->
+<section id="home" class="hero">
+  <video class="hero-bg-video" autoplay muted loop playsinline>
+    <source src="IMAGE/background video/background video.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay">
+    <div class="hero-content">
+      <img src="IMAGE/logo/logo.jpeg" alt="Logo" class="hero-logo" onerror="this.style.display='none'"/>
+      <h1>TORQUE &amp; TRIUMPH</h1>
+      <p class="tagline">Built to Race. Driven to Win.</p>
+      <div class="about-box" onclick="this.classList.toggle('bright')">
+        <h2>About Team Torque and Triumph</h2>
+        <p>We are a passionate and innovative team dedicated to designing and building a high-performance kart. As a dynamic group of creative, hardworking and goal-oriented individuals, we bring together diverse skills in engineering, design and problem solving. With a competitive spirit and hands-on approach, we aim to push the boundaries and create a kart that reflects our bold, ambitious and future-focused mindset.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPONSORS -->
+<section id="sponsors" class="section">
+  <h2 class="section-title">Our Sponsors</h2>
+  <p class="section-sub">We are grateful to our sponsors for their support. Interested in sponsoring us? <a href="#contact">Contact us!</a></p>
+  <div class="sponsors-grid" id="sponsorsGrid">
+    <div class="sponsor-card"><img src="IMAGE/sponsors/sponsor1.png" alt="Sponsor 1"/></div>
+    <div class="sponsor-card"><img src="IMAGE/sponsors/sponsor2.png" alt="Sponsor 2"/></div>
+    <div class="sponsor-card"><img src="IMAGE/sponsors/sponsor 3.png" alt="Sponsor 3"/></div>
+    <div class="sponsor-card"><img src="IMAGE/sponsors/sponsor 4.png" alt="Sponsor 4"/></div>
+    <div class="sponsor-card"><img src="IMAGE/sponsors/sponsor 5.png" alt="Sponsor 5"/></div>
+  </div>
+
+</section>
+
+<!-- ABOUT CIT MOTORSPORTS -->
+<section id="about-cit" class="section dark-section">
+  <h2 class="section-title">About CIT Motorsports</h2>
+  <div class="cit-content">
+    <div class="cit-text">
+      <h3>Coimbatore Institute of Technology Motorsports</h3>
+      <p>CIT Motorsports Team was started in <strong>2013</strong>. Over the past 10+ years, our college motorsports team has participated in various events across India and won awards across different categories, showcasing innovations, teamwork, dedication, and engineering excellence in every competition.</p>
+    </div>
+    <div class="cit-stats">
+      <div class="stat"><span>10+</span><p>Years of Excellence</p></div>
+      <div class="stat"><span>∞</span><p>Events Participated</p></div>
+      <div class="stat"><span>🏆</span><p>Awards Won</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- EVENTS -->
+<section id="events" class="section">
+  <h2 class="section-title">Upcoming Events</h2>
+  <div class="events-grid">
+    <div class="event-card">
+      <i class="fa-solid fa-flag-checkered"></i>
+      <h3>Formula Kart Design Challenge (FKDC) Season 10</h3>
+      <p class="event-date"><i class="fa-regular fa-calendar"></i> October 2026</p>
+      <p><i class="fa-solid fa-location-dot"></i> India</p>
+      <span class="badge upcoming">Upcoming</span>
+    </div>
+  </div>
+
+  <h2 class="section-title" style="margin-top:50px;">Participated Events</h2>
+  <div class="events-grid">
+    <div class="event-card">
+      <i class="fa-solid fa-flag-checkered"></i>
+      <h3>DKDC - Dirt Kart Design Challenge</h3>
+      <p class="event-date"><i class="fa-regular fa-calendar"></i> 27 - 29 March 2026</p>
+      <p><i class="fa-solid fa-location-dot"></i> Goa, India</p>
+      <span class="badge participated">Participated</span>
+    </div>
+  </div>
+
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="section dark-section">
+  <h2 class="section-title">Gallery</h2>
+  <div class="gallery-tabs">
+    <button class="tab-btn" onclick="toggleDKDC(this)">DKDC - Dirt Kart Design Challenge</button>
+  </div>
+  <div id="dkdcSubBtns" class="gallery-sub-tabs">
+    <button class="tab-btn" onclick="showTab('photos', this)">Photos</button>
+    <button class="tab-btn" onclick="showTab('videos', this)">Videos</button>
+  </div>
+  <div id="photos" class="gallery-grid tab-content">
+    <img src="ASSESES/photos/p1.png" alt="Gallery Photo"/>
+    <img src="ASSESES/photos/p2.png" alt="Gallery Photo"/>
+    <img src="ASSESES/photos/p3.png" alt="Gallery Photo"/>
+    <img src="ASSESES/photos/p4.png" alt="Gallery Photo"/>
+    <img src="ASSESES/photos/p5.png" alt="Gallery Photo"/>
+    <img src="ASSESES/photos/p6.jpeg" alt="Gallery Photo"/>
+    <img src="ASSESES/photos/p7.jpeg" alt="Gallery Photo"/>
+    <img src="ASSESES/photos/p8.jpeg" alt="Gallery Photo"/>
+  </div>
+  <div id="videos" class="gallery-grid tab-content">
+    <video controls><source src="ASSESES/gv1.mp4" type="video/mp4"></video>
+    <video controls><source src="ASSESES/gv2.mp4" type="video/mp4"></video>
+    <video controls><source src="ASSESES/gv3.mp4" type="video/mp4"></video>
+    <video controls><source src="ASSESES/gv4.mp4" type="video/mp4"></video>
+    <video controls><source src="ASSESES/gv5.mp4" type="video/mp4"></video>
+    <video controls><source src="ASSESES/gv6.mp4" type="video/mp4"></video>
+    <video controls><source src="ASSESES/gv7.mp4" type="video/mp4"></video>
+    <video controls><source src="ASSESES/gv8.mp4" type="video/mp4"></video>
+    <video controls><source src="ASSESES/gv9.mp4" type="video/mp4"></video>
+    <video controls><source src="ASSESES/gv10.mp4" type="video/mp4"></video>
+    <video controls><source src="ASSESES/gv11.mp4" type="video/mp4"></video>
+    <video controls><source src="ASSESES/gv12.mp4" type="video/mp4"></video>
+    <video controls><source src="ASSESES/gv13.mp4" type="video/mp4"></video>
+    <video controls><source src="ASSESES/gv14.mp4" type="video/mp4"></video>
+    <video controls><source src="ASSESES/gv15.mp4" type="video/mp4"></video>
+    <video controls><source src="ASSESES/gv16.mp4" type="video/mp4"></video>
+  </div>
+
+</section>
+
+<!-- TEAM -->
+<section id="team" class="section">
+  <h2 class="section-title">Meet the Team</h2>
+
+  <!-- FACULTY -->
+  <h3 class="sub-title">Faculty Members</h3>
+  <div class="team-leadership">
+    <div class="member-card faculty-hod">
+      <div class="member-photo"><img src="IMAGE/faculty/rajesh-ranganathan.jpg.jpeg" alt="Dr. Rajesh Ranganathan" onerror="this.onerror=null;this.src='IMAGE/default.png';this.onerror=function(){this.style.display='none'}"/></div>
+      <h3>Dr. Rajesh Ranganathan</h3><p>Head of Department</p>
+    </div>
+    <div class="member-card faculty">
+      <div class="member-photo"><img src="IMAGE/faculty/suresh%20kannan.jpg.jpeg" alt="Dr. G. Suresh Kannan" onerror="this.onerror=null;this.src='IMAGE/default.png';this.onerror=function(){this.style.display='none'}"/></div>
+      <h3>Dr. G. Suresh Kannan</h3><p>Faculty Advisor</p>
+    </div>
+    <div class="member-card faculty">
+      <div class="member-photo"><img src="IMAGE/faculty/velliangiri.jpg.jpeg" alt="Dr. M. Vellangiri" onerror="this.onerror=null;this.src='IMAGE/default.png';this.onerror=function(){this.style.display='none'}"/></div>
+      <h3>Dr. M. Vellangiri</h3><p>Faculty Advisor</p>
+    </div>
+    <div class="member-card faculty">
+      <div class="member-photo"><img src="IMAGE/faculty/karthikeyan.jpg.jpeg" alt="Dr. M. Karthikeyan" onerror="this.onerror=null;this.src='IMAGE/default.png';this.onerror=function(){this.style.display='none'}"/></div>
+      <h3>Dr. M. Karthikeyan</h3><p>Faculty Advisor</p>
+    </div>
+    <div class="member-card faculty">
+      <div class="member-photo"><img src="IMAGE/faculty/sam-solomon.jpg.jpeg" alt="Dr. Sam Solomon" onerror="this.onerror=null;this.src='IMAGE/default.png';this.onerror=function(){this.style.display='none'}"/></div>
+      <h3>Dr. Sam Solomon</h3><p>Faculty Advisor</p>
+    </div>
+  </div>
+
+  <h3 class="sub-title">Team Members</h3>
+
+  <div class="team-tabs">
+    <img src="IMAGE/logo/logo.jpeg" alt="T&T Logo" class="team-logo"/>
+    <button class="team-tab-btn" onclick="showTeamTab('batch2327', this)">Batch 23-27</button>
+  </div>
+
+  <div id="batch2327" class="team-tab-content">
+  <!-- LEADERSHIP -->
+  <div class="team-leadership">
+    <div class="member-card leader">
+      <div class="member-photo"><img src="IMAGE/team/prem.jpg" alt="Prem Kumar M" onerror="this.onerror=null;this.src='IMAGE/default.png';this.onerror=function(){this.style.display='none'}"/></div>
+      <h3>Prem Kumar M</h3><p>Team Captain</p>
+    </div>
+    <div class="member-card vice">
+      <div class="member-photo"><img src="IMAGE/team/gopi.jpg" alt="Gopi Krishna V" onerror="this.onerror=null;this.src='IMAGE/default.png';this.onerror=function(){this.style.display='none'}"/></div>
+      <h3>Gopi Krishna V</h3><p>Vice Captain</p>
+    </div>
+    <div class="member-card manager">
+      <div class="member-photo"><img src="IMAGE/team/rakhul.jpg" alt="Rakhul M" onerror="this.onerror=null;this.src='IMAGE/default.png';this.onerror=function(){this.style.display='none'}"/></div>
+      <h3>Rakhul M</h3><p>Team Manager</p>
+    </div>
+    <div class="member-card treasurer">
+      <div class="member-photo"><img src="IMAGE/team members/imresizer-1000069889 - 056 R Susindhar.jpg" alt="Susindhar R" onerror="this.style.display='none'"/></div>
+      <h3>Susindhar R</h3><p>Treasurer</p>
+    </div>
+  </div>
+
+  <!-- TEAM DEPARTMENTS -->
+  <div class="dept-grid">
+
+    <div class="dept-card">
+      <button class="dept-btn" onclick="toggleDept(this)">
+        <i class="fa-solid fa-wrench"></i> Fabrication Team <span class="dept-count">5 members</span><i class="fa-solid fa-chevron-down arrow"></i>
+      </button>
+      <div class="dept-members">
+        <div class="member-card"><div class="member-photo"><img src="IMAGE/team/gopi.jpg" alt="Gopi Krishna V" onerror="this.onerror=null;this.src='IMAGE/default.png';this.onerror=function(){this.style.display='none'}"/></div><h3>Gopi Krishna V</h3><p>Fabrication</p></div>
+        <div class="member-card"><div class="member-photo"><img src="IMAGE/team/arshath.jpg" alt="Arshath Marzook S M" onerror="this.onerror=null;this.src='IMAGE/default.png';this.onerror=function(){this.style.display='none'}"/></div><h3>Arshath Marzook S M</h3><p>Fabrication</p></div>
+        <div class="member-card"><div class="member-photo"><img src="IMAGE/team members/1774237489703(1)(1) - Niranjan K.png" alt="Niranjan Karthikeyan K" onerror="this.style.display='none'"/></div><h3>Niranjan Karthikeyan K</h3><p>Fabrication</p><p class="member-phone">9842142424</p></div>
+        <div class="member-card"><div class="member-photo"><img src="IMAGE/team members/imresizer-1000069889 - 056 R Susindhar.jpg" alt="Susindhar R" onerror="this.style.display='none'"/></div><h3>Susindhar R</h3><p>Fabrication</p><p class="member-phone">9342530449</p></div>
+        <div class="member-card"><div class="member-photo"><img src="IMAGE/team members/Prince.jpeg" alt="Prince S" onerror="this.style.display='none'"/></div><h3>Prince S</h3><p>Fabrication</p><p class="member-phone">8015950015</p></div>
+      </div>
+    </div>
+
+    <div class="dept-card">
+      <button class="dept-btn" onclick="toggleDept(this)">
+        <i class="fa-solid fa-gear"></i> Power Train &amp; Transmission <span class="dept-count">5 members</span><i class="fa-solid fa-chevron-down arrow"></i>
+      </button>
+      <div class="dept-members">
+        <div class="member-card"><div class="member-photo"><img src="IMAGE/team/rakhul.jpg" alt="Rakhul M" onerror="this.onerror=null;this.src='IMAGE/default.png';this.onerror=function(){this.style.display='none'}"/></div><h3>Rakhul M</h3><p>Power Train</p></div>
+        <div class="member-card"><div class="member-photo"><img src="IMAGE/team members/IMG_20260323_133807 - Dhilip Rajkumar.jpg" alt="Dhilip R" onerror="this.style.display='none'"/></div><h3>Dhilip R</h3><p>Power Train</p><p class="member-phone">8838673262</p></div>
+        <div class="member-card"><div class="member-photo"><img src="IMAGE/team members/IMG_20260323_133242 - 064 ALAGUSUNDARAM C.jpg" alt="Alagusundaram C" onerror="this.style.display='none'"/></div><h3>Alagusundaram C</h3><p>Power Train</p><p class="member-phone">9965504499</p></div>
+        <div class="member-card"><div class="member-photo"><img src="IMAGE/team members/RAGULWIN R S.jpg" alt="Ragulwin R S" onerror="this.style.display='none'"/></div><h3>Ragulwin R S</h3><p>Power Train</p><p class="member-phone">9344544399</p></div>
+        <div class="member-card"><div class="member-photo"><img src="IMAGE/team members/IMG_20260322_224556 - Santhosh raja.jpg" alt="Santhosh Raja P" onerror="this.style.display='none'"/></div><h3>Santhosh Raja P</h3><p>Power Train</p><p class="member-phone">8825804978</p></div>
+      </div>
+    </div>
+
+    <div class="dept-card">
+      <button class="dept-btn" onclick="toggleDept(this)">
+        <i class="fa-solid fa-steering-wheel"></i> Steering &amp; Tyre Control <span class="dept-count">6 members</span><i class="fa-solid fa-chevron-down arrow"></i>
+      </button>
+      <div class="dept-members">
+        <div class="member-card"><div class="member-photo"><img src="IMAGE/team/mithun.jpg" alt="Mithun Karthikeyan M" onerror="this.onerror=null;this.src='IMAGE/default.png';this.onerror=function(){this.style.display='none'}"/></div><h3>Mithun Karthikeyan M</h3><p>Steering</p></div>
+        <div class="member-card"><div class="member-photo"><img src="IMAGE/team/gopi.jpg" alt="Gopi Krishna V" onerror="this.onerror=null;this.src='IMAGE/default.png';this.onerror=function(){this.style.display='none'}"/></div><h3>Gopi Krishna V</h3><p>Steering</p></div>
+        <div class="member-card"><div class="member-photo"><img src="IMAGE/team members/Somesh R - Somesh Radhakrishnan.jpg" alt="Somesh S" onerror="this.style.display='none'"/></div><h3>Somesh R</h3><p>Steering</p><p class="member-phone">8903232823</p></div>
+        <div class="member-card"><div class="member-photo"><img src="IMAGE/team members/PRANESH LAL - PRANESH LAL B.G.jpg" alt="Pranesh Lal G" onerror="this.style.display='none'"/></div><h3>Pranesh Lal G</h3><p>Steering</p><p class="member-phone">9514495194</p></div>
+        <div class="member-card"><div class="member-photo"><img src="IMAGE/team members/a0ba1cc9-9bfd-448e-ac19-df8254d463b6 - 090–JOSHUA CLIFFORD J.jpeg" alt="Joshua Clifford J" onerror="this.style.display='none'"/></div><h3>Joshua Clifford J</h3><p>Steering</p><p class="member-phone">6379903233</p></div>
+        <div class="member-card"><div class="member-photo"><img src="IMAGE/team/sanjith.jpg" alt="Sanjith S" onerror="this.onerror=null;this.src='IMAGE/default.png';this.onerror=function(){this.style.display='none'}"/></div><h3>Sanjith S</h3><p>Steering</p></div>
+      </div>
+    </div>
+
+    <div class="dept-card">
+      <button class="dept-btn" onclick="toggleDept(this)">
+        <i class="fa-solid fa-circle-stop"></i> Braking Team <span class="dept-count">5 members</span><i class="fa-solid fa-chevron-down arrow"></i>
+      </button>
+      <div class="dept-members">
+        <div class="member-card"><div class="member-photo"><img src="IMAGE/team members/IMG_20250801_174448 - Saravanan P.jpg" alt="Saravana P" onerror="this.style.display='none'"/></div><h3>Saravana P</h3><p>Braking</p><p class="member-phone">8524866133</p></div>
+        <div class="member-card"><div class="member-photo"><img src="IMAGE/team members/Naren Karthikeyan K.jpg" alt="Naren Karthikeyan K" onerror="this.style.display='none'"/></div><h3>Naren Karthikeyan K</h3><p>Braking</p><p class="member-phone">9629421012</p></div>
+        <div class="member-card"><div class="member-photo"><img src="IMAGE/team members/Mahendran.png" alt="Mahendran M" onerror="this.style.display='none'"/></div><h3>Mahendran M</h3><p>Braking</p><p class="member-phone">9363443367</p></div>
+        <div class="member-card"><div class="member-photo"><img src="IMAGE/team members/avanish ks.jpeg" alt="Avanish K S" onerror="this.style.display='none'"/></div><h3>Avanish K S</h3><p>Braking</p></div>
+        <div class="member-card"><div class="member-photo"><img src="IMAGE/team members/imresizer-1000069889 - 056 R Susindhar.jpg" alt="Susindhar R" onerror="this.style.display='none'"/></div><h3>Susindhar R</h3><p>Braking</p><p class="member-phone">9342530449</p></div>
+      </div>
+    </div>
+
+    <div class="dept-card">
+      <button class="dept-btn" onclick="toggleDept(this)">
+        <i class="fa-solid fa-compass-drafting"></i> Design Team <span class="dept-count">3 members</span><i class="fa-solid fa-chevron-down arrow"></i>
+      </button>
+      <div class="dept-members">
+        <div class="member-card"><div class="member-photo"><img src="IMAGE/team/prem.jpg" alt="Prem Kumar M" onerror="this.onerror=null;this.src='IMAGE/default.png';this.onerror=function(){this.style.display='none'}"/></div><h3>Prem Kumar M</h3><p>Design</p></div>
+        <div class="member-card"><div class="member-photo"><img src="IMAGE/team members/Somesh R - Somesh Radhakrishnan.jpg" alt="Somesh S" onerror="this.style.display='none'"/></div><h3>Somesh R</h3><p>Design</p><p class="member-phone">8903232823</p></div>
+        <div class="member-card"><div class="member-photo"><img src="IMAGE/team members/IMG-20260130-WA0055_cropped_processed_by_imagy - Sanjay Kishore.jpg" alt="Sanjay Kishore B" onerror="this.style.display='none'"/></div><h3>Sanjay Kishore B</h3><p>Design</p><p class="member-phone">6382268693</p></div>
+      </div>
+    </div>
+
+    <div class="dept-card">
+      <button class="dept-btn" onclick="toggleDept(this)">
+        <i class="fa-solid fa-file-lines"></i> Documentation Team <span class="dept-count">4 members</span><i class="fa-solid fa-chevron-down arrow"></i>
+      </button>
+      <div class="dept-members">
+        <div class="member-card"><div class="member-photo"><img src="IMAGE/team members/IMG_20260323_054631 - K R I T H I C K.S.jpg" alt="Kerithick S" onerror="this.style.display='none'"/></div><h3>Kerithick S</h3><p>Documentation</p><p class="member-phone">9487261443</p></div>
+        <div class="member-card"><div class="member-photo"><img src="IMAGE/team members/1000181139 - Ramya Maguteeswaran.png" alt="Ramya M R" onerror="this.style.display='none'"/></div><h3>Ramya M R</h3><p>Documentation</p><p class="member-phone">9123512437</p></div>
+        <div class="member-card"><div class="member-photo"><img src="IMAGE/team members/IMG-20251217-WA0019 - Sridhar G.jpg" alt="Sridhar G" onerror="this.style.display='none'"/></div><h3>Sridhar G</h3><p>Documentation</p><p class="member-phone">9345560188</p></div>
+        <div class="member-card"><div class="member-photo"><img src="IMAGE/team/aishwarya.jpg" alt="Aishwarya P" onerror="this.onerror=null;this.src='IMAGE/default.png';this.onerror=function(){this.style.display='none'}"/></div><h3>Aishwarya P</h3><p>Documentation</p></div>
+      </div>
+    </div>
+
+    <div class="dept-card">
+      <button class="dept-btn" onclick="toggleDept(this)">
+        <i class="fa-solid fa-lightbulb"></i> Innovation Team <span class="dept-count">2 members</span><i class="fa-solid fa-chevron-down arrow"></i>
+      </button>
+      <div class="dept-members">
+        <div class="member-card"><div class="member-photo"><img src="IMAGE/team members/1000040559 - Gowtham Kishore.jpg" alt="Gowtham Kishore H" onerror="this.style.display='none'"/></div><h3>Gowtham Kishore H</h3><p>Innovation</p><p class="member-phone">9994849977</p></div>
+        <div class="member-card"><div class="member-photo"><img src="IMAGE/team/sivasankar.jpg" alt="Siva Sankar P" onerror="this.onerror=null;this.src='IMAGE/default.png';this.onerror=function(){this.style.display='none'}"/></div><h3>Siva Sankar P</h3><p>Innovation</p></div>
+      </div>
+    </div>
+
+    <div class="dept-card">
+      <button class="dept-btn" onclick="toggleDept(this)">
+        <i class="fa-solid fa-globe"></i> Website Team <span class="dept-count">2 members</span><i class="fa-solid fa-chevron-down arrow"></i>
+      </button>
+      <div class="dept-members">
+        <div class="member-card"><div class="member-photo"><img src="IMAGE/team members/avanish ks.jpeg" alt="Avanish K S" onerror="this.style.display='none'"/></div><h3>Avanish K S</h3><p>Website Team</p></div>
+        <div class="member-card"><div class="member-photo"><img src="IMAGE/team members/1Gopinath P.jpeg" alt="Gopinath P" onerror="this.style.display='none'"/></div><h3>Gopinath P</h3><p>Website Team</p></div>
+      </div>
+    </div>
+
+    <div class="dept-card">
+      <button class="dept-btn" onclick="toggleDept(this)">
+        <i class="fa-solid fa-helmet-safety"></i> Drivers <span class="dept-count">3 members</span><i class="fa-solid fa-chevron-down arrow"></i>
+      </button>
+      <div class="dept-members">
+        <div class="member-card"><div class="member-photo"><img src="IMAGE/team members/IMG-20251114-WA0001 - Venu Dharshan.jpg" alt="Venudharshan P" onerror="this.style.display='none'"/></div><h3>Venudharshan P</h3><p>Driver</p><p class="member-phone">9677862664</p></div>
+        <div class="member-card"><div class="member-photo"><img src="IMAGE/team members/IMG-20260130-WA0055_cropped_processed_by_imagy - Sanjay Kishore.jpg" alt="Sanjay Kishore B" onerror="this.style.display='none'"/></div><h3>Sanjay Kishore B</h3><p>Driver</p><p class="member-phone">6382268693</p></div>
+        <div class="member-card"><div class="member-photo"><img src="IMAGE/team members/Mahendran.png" alt="Mahendran M" onerror="this.style.display='none'"/></div><h3>Mahendran M</h3><p>Driver</p><p class="member-phone">9363443367</p></div>
+      </div>
+    </div>
+
+  </div>
+
+  </div><!-- end batch2327 -->
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section dark-section">
+  <h2 class="section-title">Contact Us</h2>
+  <div class="contact-wrapper">
+    <div class="contact-info">
+      <div class="contact-item"><i class="fa-solid fa-location-dot"></i><div><strong>Address</strong><p>Coimbatore Institute of Technology,<br/>Civil Aerodrome Post, Avinashi Rd,<br/>Peelamedu, Coimbatore,<br/>Tamil Nadu - 641014</p></div></div>
+      <div class="contact-item"><i class="fa-solid fa-phone"></i><div><strong>Phone</strong><p>+91 XXXXX XXXXX</p></div></div>
+      <div class="contact-item"><i class="fa-solid fa-envelope"></i><div><strong>Email</strong><p>torqueandtriumph.26@gmail.com</p></div></div>
+      <div class="contact-item"><i class="fa-brands fa-instagram"></i><div><strong>Instagram</strong><p><a href="https://www.instagram.com/torque_n_triumph?igsh=bHFycTluaDBpbHR1" target="_blank">@torque_n_triumph</a></p></div></div>
+
+    </div>
+    <div class="map-container">
+      <div class="map-card">
+        <h3 class="map-heading"><i class="fa-solid fa-location-dot"></i> Location</h3>
+        <p class="map-address">Avinashi Rd, Civil Aerodrome Post, Coimbatore, Tamil Nadu 641014</p>
+        <iframe
+          src="https://maps.google.com/maps?q=Coimbatore+Institute+of+Technology,+Avinashi+Rd,+Civil+Aerodrome+Post,+Coimbatore,+Tamil+Nadu+641014&output=embed"
+          width="100%" height="400" style="border:none;border-radius:12px;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade" title="Coimbatore Institute of Technology">
+        </iframe>
+        <div style="text-align:center;margin-top:14px;">
+          <a href="https://maps.google.com/?q=Coimbatore+Institute+of+Technology+Coimbatore" target="_blank"
+            style="display:inline-flex;align-items:center;gap:8px;background:var(--red);color:#fff;padding:10px 24px;border-radius:30px;font-weight:700;font-size:0.95rem;text-decoration:none;letter-spacing:1px;">
+            <i class="fa-solid fa-location-dot"></i> Open in Google Maps
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEEDBACK -->
+<section id="feedback" class="section">
+  <h2 class="section-title">Feedback</h2>
+  <div class="feedback-wrapper">
+    <form id="feedbackForm" class="feedback-form" onsubmit="submitFeedback(event)">
+      <input type="text" id="fb-name" placeholder="Your Name" required/>
+      <input type="email" id="fb-email" placeholder="Your Email" required/>
+      <input type="text" id="fb-subject" placeholder="Subject" required/>
+      <textarea id="fb-message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Feedback <i class="fa-solid fa-paper-plane"></i></button>
+      <p id="fb-success" class="success-msg" style="display:none;">✅ Thank you! Your feedback has been received.</p>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>&copy; 2025 Torque &amp; Triumph | CIT Motorsports</p>
+  <div class="footer-socials">
+    <a href="https://www.instagram.com/torque_n_triumph?igsh=bHFycTluaDBpbHR1" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
