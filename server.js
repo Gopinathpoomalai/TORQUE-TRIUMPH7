@@ -9,7 +9,7 @@ const PORT = 3000;
 const FEEDBACK_FILE = path.join(__dirname, 'feedback-data.json');
 
 const GMAIL_USER = 'torqueandtriumph.26@gmail.com';
-const GMAIL_APP_PASSWORD = process.env.GMAIL_APP_PASSWORD || 'kzlixbyildqjizwe';
+const GMAIL_APP_PASSWORD = process.env.GMAIL_APP_PASSWORD || '';
 
 if (!GMAIL_APP_PASSWORD) {
   console.warn('⚠️  WARNING: GMAIL_APP_PASSWORD is not set. Emails will not be sent.');
