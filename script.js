@@ -1,4 +1,4 @@
-const API = 'http://localhost:3000/api/feedback';
+const API = '/.netlify/functions/feedback';
 
 // Mobile nav toggle
 function toggleMenu() {
