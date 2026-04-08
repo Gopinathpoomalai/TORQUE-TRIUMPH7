@@ -1,4 +1,4 @@
-const API = 'http://localhost:3000/api/feedback';
+const API = '/api/feedback';
 
 // Mobile nav toggle
 function toggleMenu() {
@@ -58,7 +58,7 @@ async function submitFeedback(e) {
       alert('Failed to send feedback. Please try again.');
     }
   } catch {
-    alert('Cannot connect to server. Make sure server.js is running.');
+    alert('Cannot connect to server. Please try again later.');
   }
 }
 
