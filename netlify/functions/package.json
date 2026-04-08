@@ -2,6 +2,6 @@
   "name": "netlify-functions",
   "version": "1.0.0",
   "dependencies": {
-    "nodemailer": "^8.0.3"
+    "nodemailer": "^6.9.9"
   }
 }

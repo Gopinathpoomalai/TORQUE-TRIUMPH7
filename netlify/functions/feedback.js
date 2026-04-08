@@ -18,11 +18,19 @@ exports.handler = async (event) => {
     return { statusCode: 400, body: JSON.stringify({ error: 'All fields are required.' }) };
   }
 
+  const pass = process.env.GMAIL_APP_PASSWORD;
+  if (!pass) {
+    console.error('GMAIL_APP_PASSWORD is not set');
+    return { statusCode: 500, body: JSON.stringify({ error: 'Server misconfiguration.' }) };
+  }
+
   const transporter = nodemailer.createTransport({
-    service: 'gmail',
+    host: 'smtp.gmail.com',
+    port: 465,
+    secure: true,
     auth: {
       user: 'torqueandtriumph.26@gmail.com',
-      pass: process.env.GMAIL_APP_PASSWORD
+      pass: pass
     }
   });
 
@@ -44,7 +52,7 @@ exports.handler = async (event) => {
 
     return { statusCode: 200, body: JSON.stringify({ success: true }) };
   } catch (err) {
-    console.error('Email error:', err.message);
-    return { statusCode: 500, body: JSON.stringify({ error: 'Failed to send email.' }) };
+    console.error('Email sending failed:', err.message);
+    return { statusCode: 500, body: JSON.stringify({ error: 'Failed to send email: ' + err.message }) };
   }
 };
