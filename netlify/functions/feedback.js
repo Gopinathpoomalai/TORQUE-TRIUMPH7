@@ -19,6 +19,7 @@ exports.handler = async (event) => {
   }
 
   const pass = process.env.GMAIL_APP_PASSWORD;
+  console.log('Password set:', !!pass, 'Length:', pass ? pass.length : 0);
   if (!pass) {
     console.error('GMAIL_APP_PASSWORD is not set');
     return { statusCode: 500, body: JSON.stringify({ error: 'Server misconfiguration.' }) };
